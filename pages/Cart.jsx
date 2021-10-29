@@ -9,6 +9,7 @@ export default function Cart(params){
                 backgroundColor:"white",
                 flex:1
             }}
+            
             >
         </View>
     );
