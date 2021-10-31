@@ -1,32 +1,34 @@
 import React from "react";
-import { View,Text,TouchableOpacity } from "react-native";
+import { View,Text,TextInput,TouchableOpacity, Button } from "react-native";
 
 export default function Login2(params){
     const navigation = params.navigation;
     return(
         <View
             style={{
-                backgroundColor:"white",
+                backgroundColor:"black",
                 flex:1,
-                justifyContent:"center",
-                alignItems:"center"
+                color:"white"
             }}
+            
             >
-                <Text style={{flex:1,fontweight:40,fontsize:30,PaddingTop:100, alignItems:"center"}}> WELCOME BACK</Text>
-                <View style={{flex:2}}>
-                <Text style={{color:"bisque"}}>LOGIN IN</Text>
-                <TouchableOpacity>
-                    <Text style={{padding:10,marginBottom:5,backgroundColor:"white"}}>USER NAME</Text>
-                </TouchableOpacity>
-                <TouchableOpacity>
-                    <Text style={{padding:10,marginBottom:5,backgroundColor:"white"}}>PASSWORD</Text>
-                </TouchableOpacity>
-                
-                <TouchableOpacity>
-                    <Text style={{padding:10,marginTop:20,backgroundColor:"bisque"}}>LOG IN</Text>
-                </TouchableOpacity>
-                <Text style={{fontWeight:20}}>OR LOG IN USING SOCIAL MEDIA</Text>
-                <TouchableOpacity style={{flexDirection:"row",marginLeft:5}}></TouchableOpacity>
+                <View style={{flex:1,padding:40}}><Text style={{padding:20,textAlign:"center",color:"white"}}>WELCOME BACK</Text></View>
+                <View style={{flex:3, alignItems:"center"}}>
+                    <Text style={{padding:20,textAlign:"center",color:"pink"}}>LOGIN</Text>
+                   <TouchableOpacity style={{height:40,width:"90%",padding:10,backgroundColor:"ash"}}>
+                   <TextInput style={{borderWidth: 1,borderColor: 'grey',padding: 10,marginBottom: 20,borderRadius: 5,}}
+                   placeholder="USER NAME"></TextInput>
+                    </TouchableOpacity> 
+                    <TouchableOpacity style={{height:40,width:"90%",padding:10,backgroundColor:"ash"}}>
+                   <TextInput style={{borderWidth: 1,borderColor: 'grey',padding: 10,marginTop:20,marginBottom: 20,borderRadius: 5,}}
+                   placeholder="PASSWORD"></TextInput>
+                    </TouchableOpacity> 
+                    <TouchableOpacity style={{height:40,width:"90%",padding:10,marginTop:100,}}>
+                   <Text style={{textAlign:"center",borderWidth: 1,borderColor: 'grey',padding: 10,marginBottom: 20,borderRadius: 5,backgroundColor:"pink"}}
+                   >LOGIN</Text>
+                    </TouchableOpacity> 
+
+                    
                 </View>
         </View>
     );

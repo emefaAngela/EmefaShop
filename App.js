@@ -19,7 +19,7 @@ export default function App() {
     <View style={{ flex:1}}>
       <NavigationContainer>
         <MainNavigator.Navigator
-        screenOptions={{ headerShown: false ,}} initialRouteName="Login2"
+        screenOptions={{ headerShown: false ,}} initialRouteName="Login"
         >
           <MainNavigator.Screen name="Login" component={Login}/>
           <MainNavigator.Screen name="Login2" component={Login2}/>
