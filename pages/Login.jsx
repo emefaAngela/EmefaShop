@@ -12,7 +12,7 @@ export default function Login(params){
             }}
             
             >
-                <View style={{flex:1,padding:40}}><Text style={{padding:20,textAlign:"center",color:"white"}}>WELCOME BACK</Text></View>
+                <View style={{flex:1,padding:40,marginTop:50}}><Text style={{padding:20,textAlign:"center",color:"white",fontWeight:600,fontSize:30}}>WELCOME BACK</Text></View>
                 <View style={{flex:3, alignItems:"center"}}>
                     <Text style={{padding:20,textAlign:"center",color:"pink"}}>LOGIN</Text>
                    <TouchableOpacity style={{height:40,width:"90%",padding:10,backgroundColor:"ash"}}>
