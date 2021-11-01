@@ -17,7 +17,7 @@ export default function Cart(params){
             >
                
                  <View style={{flexDirection:"row",marginTop:30,padding:10,alignContent:"space-around"}}>
-                 <View style={{alignSelf:"flex-start"}} onPress={()=>navigation.navigate('Explore')} ><FontAwesome5 name="less-than" size={24} color="pink"  /></View>
+                 <TouchableOpacity style={{alignSelf:"flex-start"}} onPress={()=>navigation.navigate('Explore')} ><FontAwesome5 name="less-than" size={24} color="pink"  /></TouchableOpacity>
                  <Text style={{paddingRight:150,paddingLeft:150,fontWeight:500,fontSize:20,color:"pink"}}>Cart</Text>
                  <View style={{}}><Feather name="shopping-cart" size={24} color="pink" /></View>
                  </View>
