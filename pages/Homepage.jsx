@@ -26,7 +26,7 @@ export default function Homepage(params){
             </TouchableOpacity>
             <TouchableOpacity style={{flexDirection:"row"}}>
                 <Text style={{margin:10}}>Not a member?</Text>
-                <Text style={{margin:10,color:"pink", fontweight:"bold"}} >Sign Up</Text>
+                <Text style={{margin:10,color:"pink", fontweight:400}} >Sign Up</Text>
             </TouchableOpacity>
         </View>
         
