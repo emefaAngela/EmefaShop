@@ -1,5 +1,6 @@
 import React from "react";
 import { View,TouchableOpacity,Text,TextInput } from "react-native";
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function SignUp(params){
     const navigation = params.navigation;
