@@ -1,11 +1,32 @@
 import React from "react";
-import { View,Text } from "react-native";
+import { View,Text,ActivityIndicator } from "react-native";
 import { Entypo } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function Explore(params){
     const navigation = params.navigation;
+    const[productsData,setProductsData] = useState();
+    async function getproducts(){
+        fetch('https://fakestoreapi.com/products?limit=8')
+        .then((response)=> response.json())
+        .then((response)=>{
+        setProductsData(response);
+            console.log(response);
+        })
+        .catch((e) =>{
+            console.log(e);
+        });
+    }
+    useEffect(() => {
+        getproducts();
+        return () => {
+            cleanup
+        }
+    }, []);
+
     return(
         <View
             style={{
