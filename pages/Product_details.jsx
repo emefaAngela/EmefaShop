@@ -58,17 +58,17 @@ export default function Product_details(params){
 
                 <View style={{height:200,width:"90%",borderRadius:40,backgroundColor:"pink",marginLeft:20,padding:20}}>
                     <View style={{display:"flex", flexDirection:"row",justifyContent:"space-between",padding:30}}>
-                      <Text style={{fontSize:20,fontWeight:600}}>Bracelet</Text>
+                      <Text style={{fontSize:20,fontWeight:"600"}}>Bracelet</Text>
 
                     </View>
                     <View style={{display:"flex", flexDirection:"row",justifyContent:"space-between",padding:30}}>
-                        <Text style={{fontSize:20,fontWeight:600}}>Price</Text>
+                        <Text style={{fontSize:20,fontWeight:"600"}}>Price</Text>
                         <View style={{display:"flex", flexDirection:"row",justifyContent:"space-evenly",alignItems:"center",height:30,width:100,borderRadius:10,borderColor:"black",borderWidth:2}}>
                             <TouchableOpacity style={{}}><FontAwesome name="minus" size={24} color="black" /></TouchableOpacity>
                             <Text style={{fontSize:20}}>1</Text>
                             <TouchableOpacity style={{}}><AntDesign name="plus" size={23} color="black" /></TouchableOpacity>
                         </View>
-                        <TouchableOpacity style={{backgroundColor:"black", height:30,width:50,borderRadius:20,fontweight:500,alignItems:"center",justifyContent:"center"}}><Text style={{color:"white"}}>Cart</Text></TouchableOpacity>
+                        <TouchableOpacity style={{backgroundColor:"black", height:30,width:50,borderRadius:20,fontweight:"500",alignItems:"center",justifyContent:"center"}}><Text style={{color:"white"}}>Cart</Text></TouchableOpacity>
                     </View>
                 </View>    
                  </View>

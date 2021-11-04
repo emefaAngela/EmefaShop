@@ -21,12 +21,12 @@ export default function Homepage(params){
             <TouchableOpacity style={{padding:10,borderRadius:10, backgroundColor:"pink",margin:10,width:"60%" }} onPress={()=>navigation.navigate('Login')}>
                 <Text>Sign In</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={{padding:10, backgroundColor:"black",borderRadius:10,margin:10,width:"60%",fontWeight:400}} onPress={()=>navigation.navigate('SignUp')}>
+            <TouchableOpacity style={{padding:10, backgroundColor:"black",borderRadius:10,margin:10,width:"60%",fontWeight:"400"}} onPress={()=>navigation.navigate('SignUp')}>
                 <Text style={{color:"white"}}>Create an Account</Text>
             </TouchableOpacity>
             <TouchableOpacity style={{flexDirection:"row"}}>
                 <Text style={{margin:10}}>Not a member?</Text>
-                <Text style={{margin:10,color:"pink", fontweight:400}} >Sign Up</Text>
+                <Text style={{margin:10,color:"pink", fontweight:"400"}} >Sign Up</Text>
             </TouchableOpacity>
         </View>
         

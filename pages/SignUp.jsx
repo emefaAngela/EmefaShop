@@ -12,7 +12,7 @@ export default function SignUp(params){
                 color:"white"
             }}
             >
-                <View style={{padding:40,marginTop:50}}><Text style={{padding:20,textAlign:"center",color:"white",fontWeight:500,fontSize:30}}>REGISTER</Text></View>
+                <View style={{padding:40,marginTop:50}}><Text style={{padding:20,textAlign:"center",color:"white",fontWeight:"500",fontSize:30}}>REGISTER</Text></View>
                 <View style={{ alignItems:"center",marginBottom:50}}>
                     
                    
