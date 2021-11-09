@@ -72,7 +72,7 @@ export default function Explore(params){
                     data={productsData}
                     contentContainerStyle={{paddingHorizontal: 10}}
                     refreshControl={<RefreshControl refreshing={loading} onRefresh={() => getproducts()} />}
-                    renderItem={({item, index}) => <TouchableOpacity  activeOpacity={0.8} style={{padding: 10,backgroundColor: 'white',  margin: 5,   width: (Dimensions.get('screen').width / 2)  -20 , borderRadius: 10, borderWidth: 2, borderColor: 'pink'}}>
+                    renderItem={({item, index}) => <TouchableOpacity  activeOpacity={0.8} style={{padding: 10,backgroundColor: 'white',  margin: 5,   width: (Dimensions.get('screen').width / 2)  -20 , borderRadius: 10, borderWidth: 2, borderColor: 'pink'}} onPress={()=>{navigation.navigate("Product_details", {item})}}>
                             <Image style={{height: 100,}} resizeMode="contain"  source={{uri: item.image}} />
                                 <Text numberOfLines={2} style={{color: 'black', flex :1 }}>{item?.title}</Text>
                     </TouchableOpacity>}

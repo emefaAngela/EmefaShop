@@ -6,17 +6,20 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
-export default function Product_details(params){
-    const navigation = params.navigation;
+export default function Product_details({navigation, route}){
+  
+        const {item} = route.params;
+
+       
     return(
         <View
             style={{
-                backgroundColor:"black",
-                marginTop:10,
+                backgroundColor:"white",
+                
                 flex:1
             }}
             >
-                <View style={{flexDirection:"row",marginTop:30,padding:10,justifyContent:"space-between",flex:1}}>
+                <View style={{flexDirection:"row",marginTop:20,padding:10,justifyContent:"space-between"}}>
                  <TouchableOpacity style={{alignSelf:"flex-start"}} onPress={()=>navigation.navigate('Explore')} ><FontAwesome5 name="less-than" size={24} color="pink"  /></TouchableOpacity>
                 
                  <View style={{}}><Feather name="grid" size={24} color="pink" /></View>
@@ -25,22 +28,25 @@ export default function Product_details(params){
                  <View style={{ alignContent:"center",
                 justifyContent:"center"}}>
                      <Image
+                     resizeMode="contain"
             style={{
-                width:300 ,
+                
+              
                 height:300 ,
-                marginBottom: 80, 
+                marginBottom: 40, 
+                marginTop:60
                 
                 
 
 
             }}
             source={{
-                uri:require('../assets/sample.jpg')
+                uri: item.image
             }}
             />
                 </View> 
 
-                <View style={{display:"flex", flexDirection:"row", justifyContent:"space-evenly",padding:10,marginBottom:50}}>
+                <View style={{display:"flex", flexDirection:"row", justifyContent:"space-evenly",padding:10,marginBottom:30}}>
                     <View style={{height:70, width:70,borderRadius:10,backgroundColor:"pink",alignItems:"center",justifyContent:"center"}}>
                     
                 <MaterialCommunityIcons name="hours-24" size={30} color="black" />
@@ -56,21 +62,20 @@ export default function Product_details(params){
                     </View>
                 </View>
 
-                <View style={{height:200,width:"90%",borderRadius:40,backgroundColor:"pink",marginLeft:20,padding:20}}>
-                    <View style={{display:"flex", flexDirection:"row",justifyContent:"space-between",padding:30}}>
-                      <Text style={{fontSize:20,fontWeight:"600"}}>Bracelet</Text>
-
+                <View style={{height:200,width:"90%",borderRadius:40,backgroundColor:"pink",marginLeft:20,padding:10,display:"flex",flexDirection:"column"}}>
+                    <View style={{padding:20,display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+                      <Text style={{fontSize:15,fontWeight:"600",justifyContent:"center",alignContent:"center"}}>{item?.title}</Text>
+                      <Text style={{fontSize:15,fontWeight:"600",justifyContent:"center",alignContent:"center"}}>{item?.price}</Text>
+                      <View
+                      style={{borderColor:"black",border:10 }}></View>
+                      <Text style={{fontSize:10,fontWeight:"500",justifyContent:"center",alignItems:"center",padding:10}}>{item?.description}</Text>
                     </View>
-                    <View style={{display:"flex", flexDirection:"row",justifyContent:"space-between",padding:30}}>
-                        <Text style={{fontSize:20,fontWeight:"600"}}>Price</Text>
-                        <View style={{display:"flex", flexDirection:"row",justifyContent:"space-evenly",alignItems:"center",height:30,width:100,borderRadius:10,borderColor:"black",borderWidth:2}}>
-                            <TouchableOpacity style={{}}><FontAwesome name="minus" size={24} color="black" /></TouchableOpacity>
-                            <Text style={{fontSize:20}}>1</Text>
-                            <TouchableOpacity style={{}}><AntDesign name="plus" size={23} color="black" /></TouchableOpacity>
-                        </View>
-                        <TouchableOpacity style={{backgroundColor:"black", height:30,width:50,borderRadius:20,fontweight:"500",alignItems:"center",justifyContent:"center"}}><Text style={{color:"white"}}>Cart</Text></TouchableOpacity>
-                    </View>
+                    
                 </View>    
+                 </View>
+                 <View style={{width:"100%",height:40,backgroundColor:"black",display:"flex",flexDirection:"row",marginTop:150}}>
+                     <TouchableOpacity style={{width:"50%",height:40,backgroundColor:"black"}}> <Text style={{color:"pink",textAlign:"center",fontSize:20,fontWeight:"500"}}>Add to Wishlist </Text></TouchableOpacity>
+                     <TouchableOpacity style={{width:"50%",height:40,backgroundColor:"pink"}}> <Text style={{color:"black",textAlign:"center",fontSize:20,fontWeight:"500"}} onPress={()=>{navigation.navigate("Cart", {item})}}>Add to Cart </Text></TouchableOpacity>
                  </View>
         </View>
     );
